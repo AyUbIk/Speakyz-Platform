@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://cdn.tailwindcss.com https://apis.google.com https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://i.ytimg.com; connect-src 'self' https://*.googleapis.com https://*.workers.dev https://cloudflareinsights.com wss://*.firebaseio.com; frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com https://player.vimeo.com https://www.loom.com https://*.firebaseapp.com https://accounts.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Вход — Speakyz</title>
+  <meta name="description" content="Войдите или создайте аккаунт Speakyz, чтобы писать репетиторам.">
+  <meta name="theme-color" content="#F5F6FB">
+  <meta property="og:site_name" content="Speakyz">
+  <meta property="og:title" content="Вход — Speakyz">
+  <meta property="og:description" content="Войдите или создайте аккаунт Speakyz, чтобы писать репетиторам.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+  <script src="js/theme-init.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="robots" content="noindex">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="login" data-module="login.js">
+  <a class="skip" href="#main" data-i18n="a11y.skip"></a>
+  <div id="site-header"></div>
+  <main id="main" class="mx-auto w-full max-w-md px-4 py-10 sm:py-16">
+    <div class="bubble p-6 sm:p-8">
+      <h1 id="login-title" class="font-display text-2xl font-semibold" data-i18n="auth.login"></h1>
+      <div class="tabs" role="tablist">
+        <button class="tab" type="button" role="tab" data-tab="login" aria-selected="true" data-i18n="auth.login"></button>
+        <button class="tab" type="button" role="tab" data-tab="register" aria-selected="false" data-i18n="auth.register"></button>
+      </div>
+      <form id="auth-form" class="mt-6 space-y-4" novalidate>
+        <div id="name-row" hidden>
+          <label class="label" for="name" data-i18n="auth.name"></label>
+          <input class="input" id="name" name="name" type="text" autocomplete="name" maxlength="60">
+        </div>
+        <div>
+          <label class="label" for="email" data-i18n="auth.email"></label>
+          <input class="input" id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div>
+          <label class="label" for="password" data-i18n="auth.password"></label>
+          <input class="input" id="password" name="password" type="password" autocomplete="current-password" aria-describedby="password-hint" required>
+          <p id="password-hint" class="mt-1 text-sm text-muted" data-i18n="auth.password.hint" hidden></p>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <label id="consent-row" class="flex items-start gap-2 text-sm" hidden>
+          <input class="mt-1 h-4 w-4 accent-[rgb(var(--c-brand))]" name="consent" type="checkbox">
+          <span><span data-i18n="auth.consent.pre"></span> <a class="link" href="legal.html#terms" data-i18n="auth.consent.terms"></a> <span data-i18n="auth.consent.and"></span> <a class="link" href="legal.html#privacy" data-i18n="auth.consent.privacy"></a></span>
+        </label>
+        <p id="form-error" class="min-h-[1.25rem] text-sm font-medium text-danger" role="alert"></p>
+        <button id="submit-btn" class="btn btn-primary btn-lg w-full" type="submit"></button>
+        <button id="forgot-btn" class="link text-sm" type="button" data-i18n="auth.forgot"></button>
+      </form>
+      <p class="my-5 text-center text-sm text-muted" data-i18n="common.or"></p>
+      <button id="google-btn" class="btn btn-ghost btn-lg w-full" type="button" data-i18n="auth.google"></button>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

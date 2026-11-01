@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://cdn.tailwindcss.com https://apis.google.com https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://i.ytimg.com; connect-src 'self' https://*.googleapis.com https://*.workers.dev https://cloudflareinsights.com wss://*.firebaseio.com; frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com https://player.vimeo.com https://www.loom.com https://*.firebaseapp.com https://accounts.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Speakyz — репетиторы, с которыми получается</title>
+  <meta name="description" content="Найдите репетитора и пишите ему напрямую. Каждую анкету проверяет модератор, скрытых комиссий нет.">
+  <meta name="theme-color" content="#F5F6FB">
+  <meta property="og:site_name" content="Speakyz">
+  <meta property="og:title" content="Speakyz — репетиторы, с которыми получается">
+  <meta property="og:description" content="Найдите репетитора и пишите ему напрямую. Каждую анкету проверяет модератор, скрытых комиссий нет.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+  <script src="js/theme-init.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main" data-i18n="a11y.skip"></a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="mx-auto max-w-6xl px-4 pb-10 pt-14 sm:pt-24">
+      <h1 class="max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl" data-i18n="home.title"></h1>
+      <p class="mt-6 max-w-xl text-lg text-muted" data-i18n="home.lead"></p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a class="btn btn-primary btn-lg" href="#catalog" data-i18n="home.cta.find"></a>
+        <a class="btn btn-ghost btn-lg" href="profile.html" data-i18n="home.cta.teach"></a>
+      </div>
+    </section>
+    <section id="catalog" class="mx-auto max-w-6xl px-4" aria-live="polite"></section>
+  </main>
+  <div id="site-footer"></div>
+  <noscript><p style="padding:1rem;text-align:center">Для работы Speakyz нужен JavaScript.</p></noscript>
+</body>
+</html>
